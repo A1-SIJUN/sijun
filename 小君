@@ -1,0 +1,39 @@
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vegas.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/toucheffects.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+  //获取滚动条当前的位置
+  function getScrollTop() {
+    var scrollTop = 0;
+    if(document.documentElement && document.documentElement.scrollTop) {
+      scrollTop = document.documentElement.scrollTop;
+    } else if(document.body) {
+      scrollTop = document.body.scrollTop;
+    }
+    return scrollTop;
+  }
+
+  var nav_dom=document.getElementById("nav_model");
+
+  window.onscroll = function() {
+
+    if(getScrollTop() > 150) {
+      nav_dom.classList.add("navbar-add");
+    } else {
+      nav_dom.classList.remove("navbar-add");
+    }
+  }
+</script>
+
+
+
+</html>
